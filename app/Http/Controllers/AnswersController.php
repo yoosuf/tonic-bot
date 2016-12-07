@@ -37,12 +37,12 @@ class AnswersController extends Controller
     {
     	$user = auth()->user();
 
-    	$data = [
-    		'content' => request()->get('content')
-    	];
+        $data = [
+            'content' => request()->get('content')
+        ];
 
-		$user->questions()->answers()->create($data);
+        $user->questions()->answers()->create($data);
 
-		return "Data was created";
+        return "Data was created";
     }
 }
